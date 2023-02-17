@@ -9,8 +9,11 @@ class ButtonRow extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: buttons,
+    return Expanded(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: buttons,
+      ),
     );
   }
 }
