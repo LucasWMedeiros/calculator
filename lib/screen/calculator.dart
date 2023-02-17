@@ -1,4 +1,5 @@
 import 'package:calculator/component/display.dart';
+import 'package:calculator/component/keyboard.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatelessWidget {
@@ -10,7 +11,7 @@ class Calculator extends StatelessWidget {
       home: Column(
         children: [
           Display('123.51'),
-          Text('Keyboard'),
+          Keyboard(),
         ],
       ),
     );

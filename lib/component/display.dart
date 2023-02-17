@@ -1,7 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class Display extends StatelessWidget {
-
   final String text;
   const Display(this.text);
 
@@ -17,7 +17,19 @@ class Display extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(text),
+              child: AutoSizeText(
+                text,
+                minFontSize: 20,
+                maxFontSize: 80,
+                maxLines: 1,
+                textAlign: TextAlign.end,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w100,
+                  decoration: TextDecoration.none,
+                  fontSize: 80,
+                  color: Colors.white
+                ),
+              ),
             ),
           ],
         ),
