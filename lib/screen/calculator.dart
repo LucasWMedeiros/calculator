@@ -2,6 +2,7 @@ import 'package:calculator/component/display.dart';
 import 'package:calculator/component/keyboard.dart';
 import 'package:calculator/models/memory.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Calculator extends StatefulWidget {
   const Calculator({Key? key}) : super(key: key);
@@ -21,6 +22,9 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp
+    ]);
     return MaterialApp(
       home: Column(
         children: [
